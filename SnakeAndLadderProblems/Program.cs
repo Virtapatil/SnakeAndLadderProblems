@@ -7,17 +7,18 @@ namespace SnakeAndLadderProblems
 {
     internal class Program
     {
-        public static void Main(string[] args)
+        static void Main(string[] args)
+        {
+            int startPosition = 0, dieCount = 0;
+            const int noPlay = 1, ladder = 2, snake = 3;
+            Console.WriteLine("welcome to snake and ladder program");
 
-        { 
-            int startPosition = 0;
-            Console.WriteLine("the player start position is:" + startPosition);
-            Random random = new Random();
             while (startPosition < 100)
             {
+                Random random = new Random();
                 int dieValue = random.Next(1, 7);
                 Console.WriteLine("The player roll a die:" + dieValue);
-                const int noPlay = 1, ladder = 2, snake = 3;
+
                 int option = random.Next(1, 4);
                 Console.WriteLine("option:" + option);
 
@@ -33,6 +34,7 @@ namespace SnakeAndLadderProblems
                             startPosition = startPosition - dieValue;
                         }
                         Console.WriteLine("player got ladder and move ahead :" + startPosition);
+                        dieCount++;
                         break;
                     case snake:
                         startPosition = startPosition - dieValue;
@@ -41,9 +43,13 @@ namespace SnakeAndLadderProblems
                             startPosition = 0;
                         }
                         Console.WriteLine("player got snake and move behind :" + startPosition);
+                        dieCount++;
                         break;
                 }
+                Console.WriteLine("player is at:" + startPosition);
             }
+            Console.WriteLine("Dice count:" + dieCount);
+            Console.ReadLine();
         }
     }
 }
