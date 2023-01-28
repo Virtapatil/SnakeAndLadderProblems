@@ -9,7 +9,7 @@ namespace SnakeAndLadderProblems
     {
         public static void Main(string[] args)
 
-        { 
+        {
             int startPosition = 0;
             Console.WriteLine("the player start position is:" + startPosition);
             Random random = new Random();
