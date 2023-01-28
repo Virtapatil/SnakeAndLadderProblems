@@ -1,10 +1,15 @@
-﻿namespace SnakeAndLadderProblems
+﻿using System.Numerics;
+
+namespace SnakeAndLadderProblems
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Snake And Ladder Problems");
+        public static void Main(string[] args)
+
+        { 
+             int startPosition = 0;
+             Console.WriteLine("the player start position is:" + startPosition);
         }
+        
     }
 }
