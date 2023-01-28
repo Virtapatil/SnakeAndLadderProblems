@@ -12,7 +12,6 @@ namespace SnakeAndLadderProblems
             Console.WriteLine("the player start position is:" + startPosition);
             Random random = new Random();
             int dieValue = random.Next(1, 7);
-            int dieCount = random.Next(1, 7);
             Console.WriteLine("The player roll a die:" + dieValue );
             const int noPlay = 1, ladder = 2, snake = 3;
             int option = random.Next(1, 4);
@@ -30,7 +29,7 @@ namespace SnakeAndLadderProblems
                         startPosition = startPosition - dieValue;
                     }
                     Console.WriteLine("player got ladder and move ahead :" + startPosition);
-                    dieCount++;
+                    
                     break;
                 case snake:
                     startPosition = startPosition - dieValue;
@@ -39,7 +38,7 @@ namespace SnakeAndLadderProblems
                         startPosition = 0;
                     }
                     Console.WriteLine("player got snake and move behind :" + startPosition);
-                    dieCount++;
+                   
                     break;
             }
         }
